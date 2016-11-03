@@ -5,8 +5,8 @@ module HttpStubExample
 
     def configure_success_scenarios
       {
-        "Get: Many Resources": StubExample::Resource.many,
-        "Get: One Resource":   StubExample::Resource.one,
+        "Get: Many Resources": HttpStubExample::Resource.many,
+        "Get: One Resource":   HttpStubExample::Resource.one,
         "Get: No Resources":   []
       }.each { |scenario_name, resources| add_success_scenario(scenario_name, resources) }
     end
