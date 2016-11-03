@@ -1,0 +1,4 @@
+require_relative 'http_stub_example/resource'
+require_relative 'http_stub_example/get_configurer'
+require_relative 'http_stub_example/post_configurer'
+require_relative 'http_stub_example/configurer'
