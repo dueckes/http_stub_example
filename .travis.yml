@@ -2,9 +2,10 @@ language: ruby
 services:
   - docker
 before_install:
+  - gem install bundler
   - gem install trigger_build
 after_success:
-  - trigger_build MYOB-Technology http_stub_example_producer --org
+  - trigger_build MYOB-Technology http_stub_example_producer
 cache: bundler
 notifications:
   email:
