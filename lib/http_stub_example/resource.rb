@@ -8,7 +8,7 @@ module HttpStubExample
         [
           { id: 1, name: "First Resource" },
           { id: 2, name: "Second Resource" },
-          { id: 3, name: "Third  Resource" }
+          { id: 3, name: "Third Resource" }
         ]
       end
 
