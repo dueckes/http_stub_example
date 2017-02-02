@@ -18,7 +18,7 @@ end
 HttpStubDocker::Rake::TaskGenerator.new(configurer:   HttpStubExample::Configurer,
                                         stub_name:    :http_stub_example,
                                         stub_dir:     File.expand_path("..", __FILE__),
-                                        publish_tags: [ "1.0.#{ENV["BUILD_NUMBER"]}", "latest" ])
+                                        publish_tags: [ "1.0.#{ENV["BUILD_NUMBER"]}", "candidate" ])
 
 namespace :ci do
 

@@ -8,7 +8,7 @@ before_install:
   - gem update --system
   - gem --version
   - gem install trigger_build
-script: rake commit
+script: bundle exec rake commit
 after_success:
   - trigger_build MYOB-Technology http_stub_example_producer
 cache: bundler
