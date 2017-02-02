@@ -13,7 +13,7 @@ module HttpStubExample
 
     def configure_not_found_scenario
       stub_server.add_scenario_with_one_stub!("Get: Resource Not Found") do |stub|
-        stub.match_requests(uri: /^\/resource\/\d+$/, method: :get)
+        stub.match_requests(uri: %r{^\/resource\/\d+$}, method: :get)
         stub.respond_with(status: 404)
       end
     end

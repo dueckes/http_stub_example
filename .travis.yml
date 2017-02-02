@@ -1,9 +1,14 @@
 language: ruby
 services:
   - docker
+env:
+  global:
+    - BUILD_NUMBER=$TRAVIS_BUILD_NUMBER
 before_install:
-  - gem install bundler
+  - gem update --system
+  - gem --version
   - gem install trigger_build
+script: rake commit
 after_success:
   - trigger_build MYOB-Technology http_stub_example_producer
 cache: bundler
